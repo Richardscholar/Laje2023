@@ -1,0 +1,97 @@
+//teste de programação
+        int idade; //declaração do tipo da variavel inteira  
+        idade = 5; // atribuição a variavel
+        double peso = 3.14; //declaração e atribuição da variavel quebrada
+        string nome = "Richard"; // declaração e atribuição da variavel texto 
+        Console.WriteLine ("Hello Mono World"); //impressão do codigo
+        Console.WriteLine("teste"); // impressão do codigo
+        Console.WriteLine(idade); // impressão do codigo
+        Console.WriteLine(peso); // impressao do codigo
+        Console.WriteLine(nome); // impressao do codigo
+        nome = Console.ReadLine(); // leitura da variavel
+
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        //declara variaveis
+        double n1, n2; //variaveis na mesma linha se for do mesmo tipo
+        double soma; // declaração do tipo da variavel
+        double subtracao;
+        double multiplicacao;
+        double divisao;
+        //le as variaveis
+        Console.WriteLine("Entre com dois numeros interos:");
+        n1 = Convert.ToDouble(Console.ReadLine()); //converte o codigo em inteiro
+        n2 = Convert.ToDouble(Console.ReadLine());
+        //realiza a soma
+        soma = Soma(n1, n2);
+        subtracao = n1 - n2;
+        multiplicacao = n1 * n2;
+        divisao = n1 / n2;
+        /* a==b representa igual
+           a!=b representa diferença
+           a<b a menor que b
+           a>b a maior que b
+           a>=b maior ou igual a b
+           a<=b menor ou igual a b
+           E: condição a && condição b
+           OU: condição a || condição b
+        */
+        
+        if(n2 != 0){
+            divisao = n1/n2;    
+        }
+        
+        //imprime o resultado
+        Console.WriteLine($"{n1} + {n2} = {soma}");
+        Console.WriteLine($"{n1} - {n2} = {subtracao}");
+        Console.WriteLine($"{n1} x {n2} = {multiplicacao}");
+        if(n2 == 0){
+            Console.WriteLine("nao pode dividir por 0");
+        }
+        else{
+            Console.WriteLine($"{n1} / {n2} = {divisao}");
+        }
+    
+        
+        
+    }
+    
+    public static double Soma(double a, double b) {
+        double resultado = a + b;
+        return resultado;
+    }
+}
+
+
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        //declara uma variavel para cada nota
+        double[] notas = new double[3];
+        double media;
+        
+        //le as notas
+        Console.WriteLine("entre com as 2 notas:");
+        notas[0] = Convert.ToDouble(Console.ReadLine());
+        notas[1] = Convert.ToDouble(Console.ReadLine());
+        notas[2] = Convert.ToDouble(Console.ReadLine());
+        //calcula a media
+        media = notas[0] + notas[1] + notas[2];
+        media = media / 3;
+        //imprime a media
+        Console.WriteLine($"A media e: {media}");
+    }
+}
